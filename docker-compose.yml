@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  set-game:
+    build: /Users/jeongseonhwa/set-plexus
+    container_name: set-plexus
+    ports:
+      - "5001:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=app.main:app
+      - FLASK_ENV=development
+    command: uvicorn app.main:app --host 0.0.0.0 --port 5000 --reload
