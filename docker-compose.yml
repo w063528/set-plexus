@@ -3,7 +3,7 @@ version: '3.8'
 services:
   set-game:
     build: /Users/jeongseonhwa/set-plexus
-    container_name: set-plexus
+    container_name: sset-plexus-set-game
     ports:
       - "5001:5000"
     volumes:
